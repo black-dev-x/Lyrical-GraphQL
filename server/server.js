@@ -7,11 +7,7 @@ const schema = require('./schema/schema');
 
 const app = express();
 
-// Replace with your Mongo Atlas URI
-const MONGO_URI = '';
-if (!MONGO_URI) {
-  throw new Error('You must provide a Mongo Atlas URI');
-}
+const MONGO_URI = 'mongodb://root:root@localhost:27017';
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGO_URI);
